@@ -1,6 +1,18 @@
 <component name="ArtifactManager">
   <artifact type="javafx" name="Booter">
     <output-path>$PROJECT_DIR$/out/artifacts/Booter</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="com.xg7plugins.booter.MainApplication" />
+        <option name="convertCss2Bin" value="true" />
+        <option name="description" value="aaaaaa" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="msgOutputLevel" value="Verbose" />
+        <option name="title" value="Booter" />
+        <option name="vendor" value="a" />
+        <option name="version" value="1.0" />
+      </options>
+    </properties>
     <root id="root">
       <element id="archive" name="Booter.jar">
         <element id="module-output" name="Booter" />

@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.collections.FXCollections?>
-<?import java.lang.String?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.control.TextArea?>
-<VBox spacing="15.0" alignment="CENTER" stylesheets="@styles.css" xmlns:fx="http://javafx.com/fxml" fx:controller="com.xg7plugins.booter.Controler">
+<VBox alignment="CENTER" prefHeight="243.0" prefWidth="377.0" spacing="15.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
   <Label fx:id="teste">Escolha a versão do Minecraft</Label>
   <ComboBox fx:id="version">
     <items>
       <FXCollections fx:factory="observableArrayList">
-        <String fx:value="1.20.1"/>
-        <String fx:value="1.8.8"/>
-        <String fx:value="1.7.10"/>
+        <String fx:value="1.21.1" />
+        <String fx:value="1.20.1" />
+        <String fx:value="1.17.1" />
+        <String fx:value="1.16.5" />
+        <String fx:value="1.13.2" />
+        <String fx:value="1.12.2" />
+        <String fx:value="1.8.8" />
+        <String fx:value="1.7.10" />
       </FXCollections>
     </items>
   </ComboBox>
-  <HBox fx:id="botoes" spacing="15.0" alignment="CENTER">
-    <Button styleClass="botao" fx:id="iniciar" onAction="#onIniciar" style="-fx-background-color: green">Iniciar</Button>
-    <Button styleClass="botao" fx:id="reiniciar" style="-fx-background-color: #e0d72e">Reiniciar</Button>
-    <Button styleClass="botao" fx:id="parar" style="-fx-background-color: red">Parar</Button>
+  <HBox fx:id="botoes" alignment="CENTER" spacing="15.0">
+    <Button fx:id="iniciar" onAction="#onIniciar" style="-fx-background-color: green" styleClass="botao">Iniciar</Button>
+    <Button fx:id="reiniciar" onAction="#onReiniciar" style="-fx-background-color: #e0d72e" styleClass="botao">Reiniciar</Button>
+    <Button fx:id="parar" onAction="#onParar" style="-fx-background-color: red" styleClass="botao">Parar</Button>
   </HBox>
-  <Button styleClass="botao" fx:id="ir">Ir até a pasta</Button>
-  <Label fx:id="status"></Label>
-  <Label fx:id="aviso"></Label>
-
-  <TextArea fx:id="logs"></TextArea>
+  <HBox alignment="CENTER" spacing="15.0">
+    <Button fx:id="ir" onAction="#abrirExplorer" styleClass="botao">Ir até a pasta</Button>
+    <Button fx:id="reload" onAction="#onCommandReload" styleClass="botao">/reload</Button>
+  </HBox>
+  <Button fx:id="minecraft" maxWidth="150.0" minWidth="300.0" onAction="#iniciarMinecraft" prefHeight="30.0" prefWidth="150.0" styleClass="botao">Iniciar Minecraft</Button>
+  <Label fx:id="status" />
 </VBox>

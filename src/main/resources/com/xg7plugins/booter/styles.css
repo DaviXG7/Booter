@@ -1,0 +1,14 @@
+
+
+.botao {
+    -fx-font-family: Arial sans-serif;
+    -fx-background-color: #0025ff;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-max-width: 300px;
+    -fx-min-width: 100px;
+    -fx-min-height: 30px;
+    -fx-wrap-text: wrap;
+}

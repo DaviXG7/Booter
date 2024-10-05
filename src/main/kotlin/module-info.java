@@ -11,7 +11,10 @@ module com.xg7plugins.booter {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.desktop;
 
     opens com.xg7plugins.booter to javafx.fxml;
     exports com.xg7plugins.booter;
+    exports com.xg7plugins.booter.server;
+    opens com.xg7plugins.booter.server to javafx.fxml;
 }
