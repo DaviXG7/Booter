@@ -2,17 +2,17 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.text.TextFlow?>
 <VBox alignment="CENTER" spacing="15.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
     <Label>Console:</Label>
     <ScrollPane>
-        <TextFlow fx:id="logs" prefHeight="271.0" prefWidth="491.0">
+        <TextFlow fx:id="logs" prefHeight="658.0" prefWidth="804.0">
 
         </TextFlow>
     </ScrollPane>
     <Label>Comandos:</Label>
-    <TextArea fx:id="comandos" prefHeight="2.0" prefWidth="491.0">
+    <TextArea fx:id="comandos" prefHeight="29.0" prefWidth="314.0">
 
     </TextArea>
 
