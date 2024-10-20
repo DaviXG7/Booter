@@ -7,6 +7,7 @@ import javafx.fxml.FXML
 import javafx.scene.control.Button
 import javafx.scene.control.ComboBox
 import javafx.scene.control.Label
+import javafx.scene.control.TextField
 import java.awt.Desktop
 import java.io.BufferedReader
 import java.io.File
@@ -18,6 +19,8 @@ class MainController {
 
     @FXML
     private lateinit var status: Label;
+    @FXML
+    private lateinit var nome: TextField;
     @FXML
     private lateinit var version: ComboBox<String>;
     @FXML
@@ -45,10 +48,24 @@ class MainController {
         }
     }
 
+    fun gerarNomeAleatorio(): String {
+        val letras = "abcdefghijklmnopqrstuvwxyz"
+        var nome = "";
+        for (i in 1..10) {
+            nome += letras.random()
+        }
+        return nome;
+    }
+
     fun iniciarMinecraft() {
         Thread {
+            var name = nome.text
 
-            val processBuilder = ProcessBuilder("D:\\Minecraft Versions\\scripts\\${servidor.versao}.bat")
+            if (name.isEmpty()) {
+                name = gerarNomeAleatorio()
+            }
+
+            val processBuilder = ProcessBuilder("D:\\Minecraft Versions\\scripts\\${servidor.versao}.bat", name)
             processBuilder.redirectErrorStream(true)
 
             val processo = processBuilder.start()

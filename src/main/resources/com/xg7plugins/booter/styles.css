@@ -12,3 +12,8 @@
     -fx-min-height: 30px;
     -fx-wrap-text: wrap;
 }
+
+.input {
+    -fx-max-width: 210px;
+    -fx-min-width: 210px;
+}

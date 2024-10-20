@@ -5,7 +5,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="254.0" prefWidth="397.0" spacing="15.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" prefHeight="275.0" prefWidth="397.0" spacing="15.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
   <Label fx:id="teste">Escolha a versão do Minecraft</Label>
   <ComboBox fx:id="version">
     <items>
@@ -31,5 +31,7 @@
     <Button fx:id="reload" onAction="#onCommandReload" styleClass="botao">/reload</Button>
   </HBox>
   <Button fx:id="minecraft" maxWidth="150.0" minWidth="300.0" onAction="#iniciarMinecraft" prefHeight="30.0" prefWidth="150.0" styleClass="botao">Iniciar Minecraft</Button>
+  <TextField fx:id="nome" styleClass="input" prefHeight="25.0" prefWidth="192.0" promptText="Nome (Deixe branco para aleatório)"/>
   <Label fx:id="status" />
+
 </VBox>
